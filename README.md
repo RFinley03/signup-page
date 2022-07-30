@@ -1,3 +1,3 @@
 # signup-page
-***Just practicing***
-:smile:
+## ***Just practicing***
+:smile::coffee:
