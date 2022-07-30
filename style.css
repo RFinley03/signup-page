@@ -16,7 +16,10 @@ article {
 }
 
 #wrapper {
-    background-color: #5014dc;
+    width: 100%;
+    height:100vh;
+    background-color: #0e7900;
+
     border: 2px solid #c41135;
 }
 
