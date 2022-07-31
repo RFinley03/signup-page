@@ -1,7 +1,7 @@
 const _name = document.querySelector("#_name");
 const _email = document.querySelector("#_email");
 const submit = document.querySelector(".submit");
-const _table = document.querySelector("#_table");
+const _ul = document.querySelector("#_ul");
 
 _email.addEventListener("focus", () => {
     _email.placeholder = '';
@@ -14,14 +14,12 @@ _email.addEventListener("blur", () => {
 submit.addEventListener("click", e => {
     e.preventDefault();
     if (_email.value === "" || _name === "") {
-        let _tr = document.createElement("tr");
-        let _td = document.createElement("td");
-        _td.classList.add('alert');
-        _td.append(document.createTextNode(`* please enter all text fields`));
-        _tr.append(_li);
-        _table.append(_tr);
+        let _li = document.createElement("li");
+        _li.classList.add('alert');
+        _li.appendChild(document.createTextNode(`* please enter all text fields`));
+        _ul.prepend(_li);
         setTimeout(() => {
-            _table.removeChild(_tr);
+            _ul.removeChild(_li);
         }, 3000);
         _name.value = '';
         _email.value = '';
