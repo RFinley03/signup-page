@@ -87,6 +87,10 @@ article {
     list-style-type: none;
 }
 
+#_ul li {
+    color: #000000;
+}
+
 .alert {
     color: red;
     margin-top: 2px;
