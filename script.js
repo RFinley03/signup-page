@@ -13,7 +13,17 @@ _email.addEventListener("blur", () => {
 
 submit.addEventListener("click", (e) => {
     e.preventDefault();
-    if (!_email.value !== "" && !_name !== "") {
+    if (_email.value === "" || _name === "") {
+        let _li = document.createElement("li");
+        _li.classList.add('alert');
+        _li.appendChild(document.createTextNode(`please enter all text fields`));
+        _ul.appendChild(_li);
+        setTimeout(() => {
+            _ul.removeChild(_li);
+        }, 3000);
+        _name.value = '';
+        _email.value = '';
+    } else {
         let _li = document.createElement("li");
         _li.appendChild(document.createTextNode(`${_name.value} : ${_email.value}`));
         _ul.appendChild(_li);
