@@ -81,3 +81,7 @@ article {
 .submit:hover {
     background-color: #00964b;
 }
+
+#_ul {
+    margin-top: 1em;
+}
