@@ -94,4 +94,11 @@ article {
 #_ul .alert {
     color: red;
     margin-top: 2px;
+    font-size: 1.2rem;
+}
+
+#_ul .success {
+    color: #00ad57;
+    margin-top: 2px;
+    font-size: 1.2rem;
 }

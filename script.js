@@ -2,6 +2,7 @@ const _name = document.querySelector("#_name");
 const _email = document.querySelector("#_email");
 const submit = document.querySelector(".submit");
 const _ul = document.querySelector("#_ul");
+const list = [];
 
 _email.addEventListener("focus", () => {
     _email.placeholder = '';
@@ -25,9 +26,17 @@ submit.addEventListener("click", e => {
         _email.value = '';
     } else {
         let _li = document.createElement("li");
-        _li.appendChild(document.createTextNode(`${_name.value} : ${_email.value}`));
+        _li.classList.add('success');
+        _li.appendChild(document.createTextNode(`Success`));
         _ul.appendChild(_li);
+        list.push({
+            Name: _name.value,
+            email: _email.value
+        });
         _name.value = '';
         _email.value = '';
+        setTimeout(() => {
+            _ul.removeChild(_li);
+        }, 3000);
     }
 })
