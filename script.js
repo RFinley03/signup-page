@@ -16,7 +16,7 @@ submit.addEventListener("click", (e) => {
     if (_email.value === "" || _name === "") {
         let _li = document.createElement("li");
         _li.classList.add('alert');
-        _li.appendChild(document.createTextNode(`please enter all text fields`));
+        _li.appendChild(document.createTextNode(`* please enter all text fields`));
         _ul.appendChild(_li);
         setTimeout(() => {
             _ul.removeChild(_li);

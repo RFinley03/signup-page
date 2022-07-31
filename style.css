@@ -84,6 +84,7 @@ article {
 
 #_ul {
     margin-top: 1em;
+    list-style-type: none;
 }
 
 .alert {
