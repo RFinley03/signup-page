@@ -14,7 +14,8 @@ article {
     padding: 0;
 }
 
-body,html {
+body,
+html {
     width: 100%;
     box-sizing: border-box;
     background-color: #dfcfbe;
