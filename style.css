@@ -37,7 +37,7 @@ html {
     padding: 2em;
 }
 
-#form {
+#js-form {
     margin: 5px;
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +46,7 @@ html {
     justify-content: center;
 }
 
-#form>div {
+#js-form>div {
     margin: 10px 0 10px 0;
 }
 
@@ -102,4 +102,8 @@ html {
     color: #00ad57;
     margin-top: 2px;
     font-size: 1.2rem;
+}
+
+.err {
+    color: red;
 }

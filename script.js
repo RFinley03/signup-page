@@ -1,42 +1,29 @@
-const _name = document.querySelector("#_name");
-const _email = document.querySelector("#_email");
-const submit = document.querySelector(".submit");
-const _ul = document.querySelector("#_ul");
-const list = [];
+window.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#js-form");
+    const name = document.querySelector("#_name");
+    const email = document.querySelector("#_email");
+    const list = document.querySelector("#_list");
 
-_email.addEventListener("focus", () => {
-    _email.placeholder = '';
-})
+    form.addEventListener('click', (e) => {
+        e.preventDefault();
 
-_email.addEventListener("blur", () => {
-    _email.placeholder = "eg: John_Doe@gmail.com";
-})
+        if (e.target.classList.contains('submit')) {
+            if (name.value === '' || email.value === '') {
+                const el = document.createElement("li");
+                const text = document.createTextNode(`Please Fill out all fields.`);
+                el.classList.add('err');
+                el.append(text);
+                list.appendChild(el);
+                setTimeout(() => {
+                    list.removeChild(el);
+                }, 3000);
+            } else {
+                const el = document.createElement("li");
+                const text = document.createTextNode(`${name.value} : ${email.value}`);
 
-submit.addEventListener("click", e => {
-    e.preventDefault();
-    if (_email.value === "" || _name === "") {
-        let _li = document.createElement("li");
-        _li.classList.add('alert');
-        _li.appendChild(document.createTextNode(`* please enter all text fields`));
-        _ul.prepend(_li);
-        setTimeout(() => {
-            _ul.removeChild(_li);
-        }, 3000);
-        _name.value = '';
-        _email.value = '';
-    } else {
-        let _li = document.createElement("li");
-        _li.classList.add('success');
-        _li.appendChild(document.createTextNode(`Success`));
-        _ul.appendChild(_li);
-        list.push({
-            Name: _name.value,
-            email: _email.value
-        });
-        _name.value = '';
-        _email.value = '';
-        setTimeout(() => {
-            _ul.removeChild(_li);
-        }, 3000);
-    }
-})
+                el.append(text);
+                list.appendChild(el);
+            };
+        };
+    });
+});
