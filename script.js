@@ -21,15 +21,16 @@ window.addEventListener("DOMContentLoaded", () => {
             } else {
                 const el = document.createElement("li");
                 const text = document.createTextNode(`Thank you for your feedback!`);
+                //push object to an array
                 myArray.push({
                     id: Date.now(),
                     name: `${name.value}`,
                     email: `${email.value}`
                 });
-
+                //clear input fields
                 name.value = '';
                 email.value = '';
-
+                //append li to list element
                 el.classList.add('success');
                 el.append(text);
                 list.appendChild(el);
