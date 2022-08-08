@@ -1,9 +1,10 @@
-window.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector("#js-form");
-    const name = document.querySelector("#_name");
-    const email = document.querySelector("#_email");
-    const list = document.querySelector("#_list");
+const myArray = [];
+const form = document.querySelector("#js-form");
+const name = document.querySelector("#_name");
+const email = document.querySelector("#_email");
+const list = document.querySelector("#_list");
 
+window.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('click', (e) => {
         e.preventDefault();
 
@@ -19,10 +20,22 @@ window.addEventListener("DOMContentLoaded", () => {
                 }, 3000);
             } else {
                 const el = document.createElement("li");
-                const text = document.createTextNode(`${name.value} : ${email.value}`);
+                const text = document.createTextNode(`Thank you for your feedback!`);
+                myArray.push({
+                    id: Date.now(),
+                    name: `${name.value}`,
+                    email: `${email.value}`
+                });
 
+                name.value = '';
+                email.value = '';
+
+                el.classList.add('success');
                 el.append(text);
                 list.appendChild(el);
+                setTimeout(() => {
+                    list.removeChild(el);
+                }, 3000);
             };
         };
     });
