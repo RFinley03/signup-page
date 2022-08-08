@@ -51,8 +51,8 @@ html {
 }
 
 
-#_name,
-#_email {
+#name,
+#email {
     padding: 2px;
 }
 
@@ -83,27 +83,23 @@ html {
     background-color: #00964b;
 }
 
-#_ul {
+#list {
     margin-top: 1em;
     list-style-type: none;
 }
 
-#_ul li {
+#list li {
     color: #000000;
 }
 
-#_ul .alert {
+#list .err {
     color: red;
     margin-top: 2px;
     font-size: 1.2rem;
 }
 
-#_ul .success {
+#list .success {
     color: #00ad57;
     margin-top: 2px;
     font-size: 1.2rem;
-}
-
-.err {
-    color: red;
 }

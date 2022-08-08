@@ -1,8 +1,8 @@
 const myArray = [];
 const form = document.querySelector("#js-form");
-const name = document.querySelector("#_name");
-const email = document.querySelector("#_email");
-const list = document.querySelector("#_list");
+const name = document.querySelector("#name");
+const email = document.querySelector("#email");
+const list = document.querySelector("#list");
 
 window.addEventListener("DOMContentLoaded", () => {
     form.addEventListener('click', (e) => {
