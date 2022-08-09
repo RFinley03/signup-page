@@ -11,7 +11,7 @@ window.addEventListener("DOMContentLoaded", () => {
         if (e.target.classList.contains('submit')) {
             if (name.value === '' || email.value === '') {
                 const el = document.createElement("li");
-                const text = document.createTextNode(`Please Fill out all fields.`);
+                const text = document.createTextNode(`*Please Fill out all fields*`);
                 el.classList.add('err');
                 el.append(text);
                 list.appendChild(el);
